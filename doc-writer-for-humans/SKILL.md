@@ -63,18 +63,36 @@ Every document follows this progression:
 
 Lead with value. Theory comes after the reader succeeds.
 
-## Navigation Architecture
+## Navigation Architecture Small Projects
 
 For documentation sets (multiple documents), establish clear navigation:
 
 ```
+README.md             # Entry point with map
 docs/
-├── index.md          # Entry point with map
-├── quickstart.md     # First success
+├── quickstart.md     # First success.
+├── tutorial.md       # Learning paths
+├── configuration.md  # Complete setup and configuration guide
+├── performance.md    # Performance Tuning / correct usage
+├── spec.md           # Detailed Spec
+└── reference.md      # Lookup
+```
+
+## Navigation Architecture Medium - Large Projects
+
+For documentation sets (multiple documents), establish clear navigation:
+
+```
+README.md             # Entry point with map
+docs/
+├── quickstart.md     # First success.
 ├── tutorials/        # Learning paths
 │   ├── 01-basics.md
-│   └── 02-advanced.md
+│   ├── 02-advanced.md
+│   └── 02-<feature>.md
 ├── how-to/           # Task-oriented
+├── configuration.md  # Complete setup and configuration guide
+├── performance.md    # Performance Tuning / correct usage
 ├── explanation/      # Conceptual
 └── reference/        # Lookup
 ```
