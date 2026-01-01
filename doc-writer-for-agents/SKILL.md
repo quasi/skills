@@ -605,18 +605,6 @@ Example (equivalent, 8 words + code):
                  :dest *standard-output*)
 ```
 
-## Integration with Other Skills
-
-This skill produces documentation consumed by:
-- `cl-library-designer`: Library specs
-- `elisp-analyzer`: Analysis rule sets
-- Claude Code CLAUDE.md files
-
-When generating skill documentation:
-1. Follow SKILL.md format from skill-creator
-2. Description field is primary trigger (make comprehensive)
-3. Body loads after trigger (no "when to use" in body)
-
 ## Validation Questions
 
 Before emitting agent documentation:
@@ -630,10 +618,13 @@ Before emitting agent documentation:
 
 ## Output Format
 
-Produce `.md` files with structured sections. For complex specifications, split into:
-- `SPEC.md`: Core rules and invariants
-- `RULES.md`: Detailed rule catalog
-- `CHECKLIST.md`: Verification assertions
+Produce `.agent.md` files with structured sections. For complex specifications, split into:
+- `SPEC.agent.md`: Core rules and invariants
+- `RULES.agent.md`: Detailed rule catalog
+- `CHECKLIST.agent.md`: Verification assertions
+- `<feature>.agent.md`: Sub features
+
+the .agent.md naming convention is grep friendly for agents
 
 When finished, summarize:
 1. Documents created
